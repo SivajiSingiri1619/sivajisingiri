@@ -49,33 +49,33 @@
 
         <h1 class="abt-title skil-title"> My Skills <i class="fas fa-lightbulb"></i> </h1>
 
-<!-- Slider 1 - Programming Languages -->
+<!-- Skills Section -->
 <div class="slider-wrapper" id="Skills">
   <h1 class="skill-prg">Programming Languages</h1>
 
   <div class="card active">
-    <img src="./images/c.png" alt="" class="cd">
+    <img src="./images/c.png" alt="C Language" class="cd">
     <div class="overlay">
       <a href="./certificates/C_Cisco.pdf" target="_blank">View Certificate</a>
     </div>
   </div>
 
   <div class="card">
-    <img src="./images/cpp.png" alt="" class="cd">
+    <img src="./images/cpp.png" alt="C++" class="cd">
     <div class="overlay">
       <a href="./certificates/Cpp_Cisco.pdf" target="_blank">View Certificate</a>
     </div>
   </div>
 
   <div class="card">
-    <img src="./images/python.png" alt="" class="cd">
+    <img src="./images/python.png" alt="Python" class="cd">
     <div class="overlay">
       <a href="./certificates/RedHat certificate_S.pdf" target="_blank">View Certificate</a>
     </div>
   </div>
 
   <div class="card">
-    <img src="./images/java.png" alt="" class="cd">
+    <img src="./images/java.png" alt="Java" class="cd">
     <div class="overlay">
       <a href="./certificates/Oracle Java Exam Certificate_4.pdf" target="_blank">View Certificate</a>
     </div>
@@ -87,26 +87,26 @@
   </div>
 </div>
 
-<!-- Slider 2 - Web Technologies -->
+<!-- Slider 2 -->
 <div class="slider-wrapper skill-2">
   <h1 class="skill-prg">Web Technologies</h1>
 
   <div class="card active">
-    <img src="./images/html.png" alt="" class="cd">
+    <img src="./images/html.png" alt="HTML" class="cd">
     <div class="overlay">
       <a href="./certificates/html_Cisco.pdf" target="_blank">View Certificate</a>
     </div>
   </div>
 
   <div class="card">
-    <img src="./images/css.png" alt="" class="cd">
+    <img src="./images/css.png" alt="CSS" class="cd">
     <div class="overlay">
       <a href="./certificates/CSS_Cisco.pdf" target="_blank">View Certificate</a>
     </div>
   </div>
 
   <div class="card">
-    <img src="./images/js.png" alt="" class="cd">
+    <img src="./images/js.png" alt="JavaScript" class="cd">
     <div class="overlay">
       <a href="./certificates/java_Script_Cisco.pdf" target="_blank">View Certificate</a>
     </div>
@@ -117,6 +117,7 @@
     <button class="btn next">Next ⟩</button>
   </div>
 </div>
+
 
   <h1 class="achivemnent-title">🎓 It's My Achivements</h1>
 
@@ -163,10 +164,36 @@
   </div>
 </section>
 
+<!-- Project Section -->
+<section class="projects">
+  <h1 class="project-title">Projects</h1>
+
+  <div class="project-container">
+    <!-- Project Image -->
+    <div class="project-img">
+      <img src="" alt="Project Image" class="project-img1">
+      <button class="backward-btn"><i class="fa-solid fa-arrow-left"></i></button>
+      <button class="forward-btn"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <!-- Project Info -->
+    <div class="project-info">
+      <h2>Project Info</h2>
+      <div class="proj-para"></div>
+      <div class="project-links">
+        <a class="live-link link-btn" target="_blank">Live Site</a>
+        <a class="github-link link-btn" target="_blank">GitHub Repo</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
 <section class="friends" id="contact">
   <h1>Let's be friends</h1>
   <div class="friends-container">
-    
+
     <!-- Profile Card -->
     <div class="profile-card">
       <img src="./images/prf2.jpg" alt="Profile Photo">
@@ -248,40 +275,7 @@
 </footer>
 
 
-  <script>
-   document.querySelectorAll(".slider-wrapper").forEach(wrapper => {
-  const cards = wrapper.querySelectorAll(".card");
-  const nextBtn = wrapper.querySelector(".next");
-  const prevBtn = wrapper.querySelector(".prev");
-
-  let current = 0;
-
-  function showCard(index) {
-    cards.forEach((card, i) => {
-      card.classList.remove("active");
-      if (i === index) {
-        card.classList.add("active");
-      }
-    });
-  }
-
-  nextBtn.addEventListener("click", () => {
-    current = (current + 1) % cards.length; 
-    showCard(current);
-  });
-
-  prevBtn.addEventListener("click", () => {
-    current = (current - 1 + cards.length) % cards.length; 
-    showCard(current);
-  });
-});
-
-function copyEmail() {
-  navigator.clipboard.writeText("singirisivaji@gmail.com");
-  alert("Email copied!");
-}
-
-  </script>
+ <script src="script.js"></script>
 
 </body>
 </html>
